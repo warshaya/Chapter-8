@@ -38,8 +38,9 @@ public class DrawHeart extends GraphicsProgram{
 					m_bottomPoint.getX(), m_bottomPoint.getY());
 		add(lineRight);
 		m_side = Math.sin(8*m_units);
-		m_circleDiameter = m_side;
-		GArc leftHump = new GArc(m_middlePoint - 2.5*m_oneUnit, 0, 2.5*m_oneUnit, 2.5*m_oneUnit, 45, 180);
-		add(leftHump);	
+		m_circleDiameter = 2*m_radius;
+		GArc leftHump = new GArc(m_middlePoint - m_side, m_centerOfSquareY+m_circleDiameter,
+					m_circleDiameter, m_circleDiameter, 45, 180);
+		add(leftHump);
 	}
 }
