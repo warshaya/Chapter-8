@@ -11,8 +11,10 @@ public class DrawHeart extends GraphicsProgram{
 	private double m_centerXPosition;
 	private double m_centerOfSquare;
 	private double m_side;
-	private 
-	
+	private GPoint m_leftCircleLocation;
+	private GPoint m_rightCircleLocation; 
+	private double m_circleDiameter;	
+
 	public void init()
 	{
 		setSize(600,300);
