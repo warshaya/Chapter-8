@@ -27,13 +27,13 @@ public class DrawHeart extends GraphicsProgram{
 		m_centerOfSquareY = 7*m_unit;
 		m_upperPoint.setLocation( m_centerXPosition, 3*m_unit );
 		m_bottomPoint.setLocation( m_centerXPosition, 11*m_oneUnit );
-		m_rightPoint.setLocation( m_middlePoint + 2*m_oneUnit, 2*m_oneUnit );
-		m_leftPoint.setLocation( m_middlePoint - 2*m_oneUnit, 2*m_oneUnit );
+		m_rightPoint.setLocation( m_middlePoint + 4*m_unit, m_centerOfSquareY );
+		m_leftPoint.setLocation( m_middlePoint - 4*m_unit, m_centerOfSquareY );
 		GLine lineLeft = new GLine(m_leftPoint.getX(), m_leftPoint.getY(),
-									m_bottomPoint.getX(), m_bottomPoint.getY());
+					m_bottomPoint.getX(), m_bottomPoint.getY());
 		add(lineLeft);
 		GLine lineRight = new GLine(m_rightPoint.getX(), m_rightPoint.getY(),
-				m_bottomPoint.getX(), m_bottomPoint.getY());
+					m_bottomPoint.getX(), m_bottomPoint.getY());
 		add(lineRight);
 		GArc leftHump = new GArc(m_middlePoint - 2.5*m_oneUnit, 0, 2.5*m_oneUnit, 2.5*m_oneUnit, 
 									45, 180);
