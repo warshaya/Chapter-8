@@ -37,11 +37,6 @@ public class DrawHeart extends GraphicsProgram{
 		add(lineRight);
 		GArc leftHump = new GArc(m_middlePoint - 2.5*m_oneUnit, 0, 2.5*m_oneUnit, 2.5*m_oneUnit, 
 									45, 180);
-		add(leftHump);
-		
+		add(leftHump);	
 	}
-
-
-
-
 }
