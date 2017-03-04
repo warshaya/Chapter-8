@@ -22,7 +22,7 @@ public class DrawHeart extends GraphicsProgram{
 	
 	public void run()
 	{
-		m_oneUnit = Math.min(getWidth()/5, getHeight()/5);
+		m_unit = getHeight()/13;
 		m_middlePoint = getWidth()/2;
 		m_upperPoint.setLocation( m_middlePoint, m_oneUnit );
 		m_bottomPoint.setLocation( m_middlePoint, 4*m_oneUnit );
