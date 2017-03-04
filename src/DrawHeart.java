@@ -7,8 +7,11 @@ public class DrawHeart extends GraphicsProgram{
 	private GPoint m_leftPoint = new GPoint();
 	private GPoint m_rightPoint = new GPoint();
 	private GPoint m_bottomPoint = new GPoint();
-	private double m_oneUnit;
-	private double m_middlePoint;
+	private double m_unit;
+	private double m_centerXPosition;
+	private double m_centerOfSquare;
+	private double m_side;
+	private 
 	
 	public void init()
 	{
