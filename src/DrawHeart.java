@@ -14,7 +14,6 @@ public class DrawHeart extends GraphicsProgram{
 	private double m_radius;
 	private GPoint m_leftCircleLocation;
 	private GPoint m_rightCircleLocation; 
-	private double m_circleDiameter;
 	private double m_diagonal;
 	private GLine m_lineLeft = new GLine(0,0,0,0);
 	private GLine m_lineRight = new GLine(0,0,0,0);
@@ -28,7 +27,7 @@ public class DrawHeart extends GraphicsProgram{
 	{
 		setUnits();
 		findCenter();
-		m_diagonal = 8*m_units;
+		calculateOtherDimensions();
 		m_upperPoint.setLocation( m_centerXPosition, 3*m_units );
 		m_bottomPoint.setLocation( m_centerXPosition, 11*m_units );
 		m_rightPoint.setLocation( m_centerXPosition + m_diagonal/2, m_centerOfSquareY );
@@ -39,8 +38,6 @@ public class DrawHeart extends GraphicsProgram{
 		m_lineRight.setStartPoint( m_rightPoint.getX(), m_rightPoint.getY() );
 		m_lineRight.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
 		add(m_lineRight);
-		m_side = 4 * Math.sqrt(2) * m_units;
-		m_circleDiameter = m_side;
 		GArc leftHump = new GArc( m_centerXPosition - 2*m_units - m_side/2, 
 					m_centerOfSquareY - 2*m_units - m_side/2,
 					m_side, m_side, 45, 180);
@@ -60,5 +57,11 @@ public class DrawHeart extends GraphicsProgram{
 	{
 		m_centerXPosition = getWidth()/2;
 		m_centerOfSquareY = 7*m_units;
+	}
+
+	private void calculateOtherDimensions()
+	{
+		m_diagonal = 8*m_units;
+		m_side = 4 * Math.sqrt(2) * m_units;
 	}
 }
