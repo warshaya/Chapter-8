@@ -14,6 +14,8 @@ public class DrawHeart extends GraphicsProgram{
 	private double m_diagonal;
 	private GLine m_lineLeft = new GLine(0,0,0,0);
 	private GLine m_lineRight = new GLine(0,0,0,0);
+	private GArc m_leftHump = new GArc(0,0,0,0);
+	private GArc m_rightHump = new GArc(0,0,0,0);
 
 	public void init()
 	{
@@ -26,20 +28,7 @@ public class DrawHeart extends GraphicsProgram{
 		findCenter();
 		calculateOtherDimensions();
 		setPointsForShape();
-		m_lineLeft.setStartPoint( m_leftPoint.getX(), m_leftPoint.getY() );
-		m_lineLeft.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
-		add(m_lineLeft);
-		m_lineRight.setStartPoint( m_rightPoint.getX(), m_rightPoint.getY() );
-		m_lineRight.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
-		add(m_lineRight);
-		GArc leftHump = new GArc( m_centerXPosition - 2*m_units - m_side/2, 
-					m_centerOfSquareY - 2*m_units - m_side/2,
-					m_side, m_side, 45, 180);
-		add(leftHump);
-		GArc rightHump = new GArc( m_centerXPosition + 2*m_units - m_side/2,
-					m_centerOfSquareY - 2*m_units - m_side/2,
-					m_side, m_side, -45, 180);
-		add(rightHump);
+		drawAHeart();
 	}
 
 	private void setUnits()
@@ -67,4 +56,25 @@ public class DrawHeart extends GraphicsProgram{
 		m_leftPoint.setLocation( m_centerXPosition - m_diagonal/2, m_centerOfSquareY );
 	}
 
+	private void drawAHeart()
+	{
+		m_lineLeft.setStartPoint( m_leftPoint.getX(), m_leftPoint.getY() );
+		m_lineLeft.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
+		add( m_lineLeft );
+		m_lineRight.setStartPoint( m_rightPoint.getX(), m_rightPoint.getY() );
+		m_lineRight.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
+		add (m_lineRight );
+		m_leftHump.setFrameRectangle( m_centerXPosition - 2*m_units - m_side/2, 
+					m_centerOfSquareY - 2*m_units - m_side/2 ,
+					m_side, m_side );
+		m_leftHump.setStartAngle( 45 );
+		m_leftHump.setSweepAngle( 180 );
+		add( m_leftHump );
+		m_rightHump.setFrameRectangle( m_centerXPosition + 2*m_units - m_side/2,
+					m_centerOfSquareY - 2*m_units - m_side/2,
+					m_side, m_side);
+		m_rightHump.setStartAngle( -45 );
+		m_rightHump.setSweepAngle( 180);
+		add( m_rightHump );
+	}
 }
