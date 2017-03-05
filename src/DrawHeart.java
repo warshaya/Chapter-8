@@ -28,10 +28,7 @@ public class DrawHeart extends GraphicsProgram{
 		setUnits();
 		findCenter();
 		calculateOtherDimensions();
-		m_upperPoint.setLocation( m_centerXPosition, 3*m_units );
-		m_bottomPoint.setLocation( m_centerXPosition, 11*m_units );
-		m_rightPoint.setLocation( m_centerXPosition + m_diagonal/2, m_centerOfSquareY );
-		m_leftPoint.setLocation( m_centerXPosition - m_diagonal/2, m_centerOfSquareY );
+		setPointsForShape();
 		m_lineLeft.setStartPoint( m_leftPoint.getX(), m_leftPoint.getY() );
 		m_lineLeft.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
 		add(m_lineLeft);
@@ -64,4 +61,13 @@ public class DrawHeart extends GraphicsProgram{
 		m_diagonal = 8*m_units;
 		m_side = 4 * Math.sqrt(2) * m_units;
 	}
+
+	private void setPointsForShape()
+	{
+		m_upperPoint.setLocation( m_centerXPosition, 3*m_units );
+		m_bottomPoint.setLocation( m_centerXPosition, 11*m_units );
+		m_rightPoint.setLocation( m_centerXPosition + m_diagonal/2, m_centerOfSquareY );
+		m_leftPoint.setLocation( m_centerXPosition - m_diagonal/2, m_centerOfSquareY )
+	}
+
 }
