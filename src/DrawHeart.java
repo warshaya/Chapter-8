@@ -24,9 +24,8 @@ public class DrawHeart extends GraphicsProgram{
 	
 	public void run()
 	{
-		m_units = getHeight()/13; // one unit is 1/13 of the height, seemed to fit nicely
-		m_centerXPosition = getWidth()/2;
-		m_centerOfSquareY = 7*m_units;
+		setUnits();
+		findCenter();
 		m_diagonal = 8*m_units;
 		m_upperPoint.setLocation( m_centerXPosition, 3*m_units );
 		m_bottomPoint.setLocation( m_centerXPosition, 11*m_units );
@@ -48,5 +47,16 @@ public class DrawHeart extends GraphicsProgram{
 					m_centerOfSquareY - 2*m_units - m_side/2,
 					m_side, m_side, -45, 180);
 		add(rightHump);
+	}
+
+	private void setUnits()
+	{
+		m_units = getHeight()/13; // one unit is 1/13 of the height, seemed to fit nicely
+	}
+
+	private void findCenter()
+	{
+		m_centerXPosition = getWidth()/2;
+		m_centerOfSquareY = 7*m_units;
 	}
 }
