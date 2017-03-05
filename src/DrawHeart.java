@@ -11,9 +11,6 @@ public class DrawHeart extends GraphicsProgram{
 	private double m_centerXPosition;
 	private double m_centerOfSquareY;
 	private double m_side;
-	private double m_radius;
-	private GPoint m_leftCircleLocation;
-	private GPoint m_rightCircleLocation; 
 	private double m_diagonal;
 	private GLine m_lineLeft = new GLine(0,0,0,0);
 	private GLine m_lineRight = new GLine(0,0,0,0);
@@ -67,7 +64,7 @@ public class DrawHeart extends GraphicsProgram{
 		m_upperPoint.setLocation( m_centerXPosition, 3*m_units );
 		m_bottomPoint.setLocation( m_centerXPosition, 11*m_units );
 		m_rightPoint.setLocation( m_centerXPosition + m_diagonal/2, m_centerOfSquareY );
-		m_leftPoint.setLocation( m_centerXPosition - m_diagonal/2, m_centerOfSquareY )
+		m_leftPoint.setLocation( m_centerXPosition - m_diagonal/2, m_centerOfSquareY );
 	}
 
 }
