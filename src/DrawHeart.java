@@ -38,7 +38,7 @@ public class DrawHeart extends GraphicsProgram{
 		GLine lineRight = new GLine( m_rightPoint.getX(), m_rightPoint.getY(),
 					m_bottomPoint.getX(), m_bottomPoint.getY());
 		add(lineRight);
-		m_side = m_diagonal/2 / Math.cos(45);
+		m_side = 4 * Math.sqrt(2) * m_units;
 		GLine testLineLeft = new GLine( m_upperPoint.getX(), m_upperPoint.getY(),
 					m_leftPoint.getX(), m_leftPoint.getY());
 		add(testLineLeft);
@@ -46,12 +46,12 @@ public class DrawHeart extends GraphicsProgram{
 					m_rightPoint.getX(), m_rightPoint.getY());
 		add(testLineRight); 
 		m_circleDiameter = m_side;
-		GArc leftHump = new GArc( m_centerXPosition, 
-					m_centerOfSquareY,
+		GArc leftHump = new GArc( m_centerXPosition - m_side, 
+					m_centerOfSquareY + m_side - 1.5*m_diagonal,
 					m_side, m_side, 45, 180);
 		add(leftHump);
 		GArc rightHump = new GArc( m_centerXPosition,
-					m_centerOfSquareY,
+					m_centerOfSquareY + m_side - 1.5*m_diagonal,
 					m_side, m_side, -45, 180);
 		add(rightHump);
 	}
