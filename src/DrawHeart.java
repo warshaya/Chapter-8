@@ -16,7 +16,8 @@ public class DrawHeart extends GraphicsProgram{
 	private GLine m_lineRight = new GLine(0,0,0,0);
 	private GArc m_leftHump = new GArc(0,0,0,0);
 	private GArc m_rightHump = new GArc(0,0,0,0);
-	private GCompound heart = new GCompound();
+	private GCompound m_heart = new GCompound();
+	private GPolygon m_middleSquare = new GPolygon();
 
 	public void init()
 	{
