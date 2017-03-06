@@ -1,5 +1,6 @@
 import acm.program.*;
 import acm.graphics.*;
+import java.awt.*;
 
 public class DrawHeart extends GraphicsProgram{	
 
@@ -31,7 +32,7 @@ public class DrawHeart extends GraphicsProgram{
 		calculateOtherDimensions();
 		setPointsForShape();
 		drawAHeart();
-		add( m_heart );
+		add( m_heart , m_centerXPosition, m_centerOfSquareY );
 	}
 
 	private void setUnits()
@@ -72,8 +73,8 @@ public class DrawHeart extends GraphicsProgram{
 		m_middleSquare.addEdge( -m_diagonal/2, -m_diagonal/2);
 		m_middleSquare.addEdge( m_diagonal/2, -m_diagonal/2);
 		m_middleSquare.addEdge( m_diagonal/2, m_diagonal/2);
-		m_middleSquare.setColor( color.RED );
-		m_middleSquare.setFillColor (color.RED );
+		m_middleSquare.setColor( Color.RED );
+		m_middleSquare.setFillColor ( Color.RED );
 		m_middleSquare.setFilled( true );
 		m_heart.add( m_middleSquare );
 		m_leftHump.setFrameRectangle( m_centerXPosition - 2*m_units - m_side/2, 
@@ -81,12 +82,18 @@ public class DrawHeart extends GraphicsProgram{
 					m_side, m_side );
 		m_leftHump.setStartAngle( 45 );
 		m_leftHump.setSweepAngle( 180 );
+		m_leftHump.setColor( Color.RED );
+		m_leftHump.setFillColor( Color.RED );
+		m_leftHump.setFilled( true );
 		add( m_leftHump );
 		m_rightHump.setFrameRectangle( m_centerXPosition + 2*m_units - m_side/2,
 					m_centerOfSquareY - 2*m_units - m_side/2,
 					m_side, m_side );
 		m_rightHump.setStartAngle( -45 );
 		m_rightHump.setSweepAngle( 180);
+		m_rightHump.setColor( Color.RED );
+		m_rightHump.setFillColor( Color.RED );
+		m_rightHump.setFilled ( true );
 		add( m_rightHump );
 	}
 }
