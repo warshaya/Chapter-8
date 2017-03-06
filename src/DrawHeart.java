@@ -30,8 +30,8 @@ public class DrawHeart extends GraphicsProgram{
 		findCenter();
 		calculateOtherDimensions();
 		setPointsForShape();
-		add( heart );
 		drawAHeart();
+		add( m_heart );
 	}
 
 	private void setUnits()
@@ -61,12 +61,21 @@ public class DrawHeart extends GraphicsProgram{
 
 	private void drawAHeart()
 	{
-		m_lineLeft.setStartPoint( m_leftPoint.getX(), m_leftPoint.getY() );
-		m_lineLeft.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
-		add( m_lineLeft );
-		m_lineRight.setStartPoint( m_rightPoint.getX(), m_rightPoint.getY() );
-		m_lineRight.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
-		add (m_lineRight );
+	//	m_lineLeft.setStartPoint( m_leftPoint.getX(), m_leftPoint.getY() );
+	//	m_lineLeft.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
+	//	add( m_lineLeft );
+	//	m_lineRight.setStartPoint( m_rightPoint.getX(), m_rightPoint.getY() );
+	//	m_lineRight.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
+	//	add (m_lineRight );
+		m_middleSquare.addVertex( m_diagonal/2, 0 );
+		m_middleSquare.addEdge( -m_diagonal/2, m_diagonal/2);
+		m_middleSquare.addEdge( -m_diagonal/2, -m_diagonal/2);
+		m_middleSquare.addEdge( m_diagonal/2, -m_diagonal/2);
+		m_middleSquare.addEdge( m_diagonal/2, m_diagonal/2);
+		m_middleSquare.setColor( color.RED );
+		m_middleSquare.setFillColor (color.RED );
+		m_middleSquare.setFilled( true );
+		m_heart.add( m_middleSquare );
 		m_leftHump.setFrameRectangle( m_centerXPosition - 2*m_units - m_side/2, 
 					m_centerOfSquareY - 2*m_units - m_side/2 ,
 					m_side, m_side );
@@ -75,7 +84,7 @@ public class DrawHeart extends GraphicsProgram{
 		add( m_leftHump );
 		m_rightHump.setFrameRectangle( m_centerXPosition + 2*m_units - m_side/2,
 					m_centerOfSquareY - 2*m_units - m_side/2,
-					m_side, m_side);
+					m_side, m_side );
 		m_rightHump.setStartAngle( -45 );
 		m_rightHump.setSweepAngle( 180);
 		add( m_rightHump );
