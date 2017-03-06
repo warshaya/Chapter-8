@@ -1,5 +1,6 @@
 import acm.program.*;
 import acm.graphics.*;
+import java.awt.*;
 
 public class DrawHeart extends GraphicsProgram{	
 
@@ -16,6 +17,8 @@ public class DrawHeart extends GraphicsProgram{
 	private GLine m_lineRight = new GLine(0,0,0,0);
 	private GArc m_leftHump = new GArc(0,0,0,0);
 	private GArc m_rightHump = new GArc(0,0,0,0);
+	private GCompound m_heart = new GCompound();
+	private GPolygon m_middleSquare = new GPolygon();
 
 	public void init()
 	{
@@ -29,6 +32,7 @@ public class DrawHeart extends GraphicsProgram{
 		calculateOtherDimensions();
 		setPointsForShape();
 		drawAHeart();
+		add( m_heart , m_centerXPosition, m_centerOfSquareY );
 	}
 
 	private void setUnits()
@@ -58,23 +62,38 @@ public class DrawHeart extends GraphicsProgram{
 
 	private void drawAHeart()
 	{
-		m_lineLeft.setStartPoint( m_leftPoint.getX(), m_leftPoint.getY() );
-		m_lineLeft.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
-		add( m_lineLeft );
-		m_lineRight.setStartPoint( m_rightPoint.getX(), m_rightPoint.getY() );
-		m_lineRight.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
-		add (m_lineRight );
+	//	m_lineLeft.setStartPoint( m_leftPoint.getX(), m_leftPoint.getY() );
+	//	m_lineLeft.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
+	//	add( m_lineLeft );
+	//	m_lineRight.setStartPoint( m_rightPoint.getX(), m_rightPoint.getY() );
+	//	m_lineRight.setEndPoint( m_bottomPoint.getX(), m_bottomPoint.getY() );
+	//	add (m_lineRight );
+		m_middleSquare.addVertex( m_diagonal/2, 0 );
+		m_middleSquare.addEdge( -m_diagonal/2, m_diagonal/2);
+		m_middleSquare.addEdge( -m_diagonal/2, -m_diagonal/2);
+		m_middleSquare.addEdge( m_diagonal/2, -m_diagonal/2);
+		m_middleSquare.addEdge( m_diagonal/2, m_diagonal/2);
+		m_middleSquare.setColor( Color.RED );
+		m_middleSquare.setFillColor ( Color.RED );
+		m_middleSquare.setFilled( true );
+		m_heart.add( m_middleSquare );
 		m_leftHump.setFrameRectangle( m_centerXPosition - 2*m_units - m_side/2, 
 					m_centerOfSquareY - 2*m_units - m_side/2 ,
 					m_side, m_side );
 		m_leftHump.setStartAngle( 45 );
 		m_leftHump.setSweepAngle( 180 );
+		m_leftHump.setColor( Color.RED );
+		m_leftHump.setFillColor( Color.RED );
+		m_leftHump.setFilled( true );
 		add( m_leftHump );
 		m_rightHump.setFrameRectangle( m_centerXPosition + 2*m_units - m_side/2,
 					m_centerOfSquareY - 2*m_units - m_side/2,
-					m_side, m_side);
+					m_side, m_side );
 		m_rightHump.setStartAngle( -45 );
 		m_rightHump.setSweepAngle( 180);
+		m_rightHump.setColor( Color.RED );
+		m_rightHump.setFillColor( Color.RED );
+		m_rightHump.setFilled ( true );
 		add( m_rightHump );
 	}
 }
