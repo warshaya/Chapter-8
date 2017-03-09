@@ -1,7 +1,7 @@
 import acm.program.*;
 import acm.graphics.*;
 
-public enum Stroke
+public enum Style
 {
 	STRAIGHT,
 	CURVY
@@ -20,22 +20,22 @@ public class Initials extends GraphicsProgram
 	{
 		Initial firstInitial = new Initial();		
 
-		firstInitial.drawStroke( Stroke.STRAIGHT, Position.BOTTOMLEFT, Position.TOPMIDDLE );
-		firstInitial.drawStroke( Stroke.STRAIGHT, Position.TOPMIDDLE, Position.BOTTOMRIGHT );
+		firstInitial.drawStroke( Style.STRAIGHT, Position.BOTTOMLEFT, Position.TOPMIDDLE );
+		firstInitial.drawStroke( Style.STRAIGHT, Position.TOPMIDDLE, Position.BOTTOMRIGHT );
 		firstInitial.drawMiddleBar( Position.CENTER ); 
 
 		Initial secondInitial = new Initial();
 
-		secondInitial.drawStroke( Stroke.STRAIGHT, Position.TOPLEFT, Position.TOPRIGHT );
-		secondInitial.drawStroke( Stroke.STRAIGHT, Position.BOTTOMLEFT, Position.BOTTOMRIGHT );
-		secondInitial.drawStroke( Stroke.STRAIGHT, Position.TOPMIDDLE, Position.BOTTOMMIDDLE );
+		secondInitial.drawStroke( Style.STRAIGHT, Position.TOPLEFT, Position.TOPRIGHT );
+		secondInitial.drawStroke( Style.STRAIGHT, Position.BOTTOMLEFT, Position.BOTTOMRIGHT );
+		secondInitial.drawStroke( Style.STRAIGHT, Position.TOPMIDDLE, Position.BOTTOMMIDDLE );
 
 		Initial thirdInitial = new Initial();
 
-		thirdInitial.drawStroke( Stroke.STRAIGHT, Position.TOPLEFT, Position.BOTTOMLEFT );
-		thirdInitial.drawStroke( Stroke.STRAIGHT, Position.BOTTOMLEFT, Position.CENTER );
-		thirdInitial.drawStroke( Stroke.STRAIGHT, Position.CENTER, Position.BOTTOMRIGHT );
-		thridInitial.drawStroke( Stroke.STRAIGHT, Position.BOTTOMRIGHT, Position.TOPRIGHT );
+		thirdInitial.drawStroke( Style.STRAIGHT, Position.TOPLEFT, Position.BOTTOMLEFT );
+		thirdInitial.drawStroke( Style.STRAIGHT, Position.BOTTOMLEFT, Position.CENTER );
+		thirdInitial.drawStroke( Style.STRAIGHT, Position.CENTER, Position.BOTTOMRIGHT );
+		thridInitial.drawStroke( Style.STRAIGHT, Position.BOTTOMRIGHT, Position.TOPRIGHT );
 
 		Word word = new Word();
 		
