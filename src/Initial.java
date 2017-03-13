@@ -1,4 +1,4 @@
-import acm.graphics.*;
+/*import acm.graphics.*;
 
 public class Initial extends GCompound {
 
@@ -64,4 +64,4 @@ public class Initial extends GCompound {
 		}
 	} 
 
-}
+}*/
