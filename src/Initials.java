@@ -1,6 +1,6 @@
 import acm.program.*;
 import acm.graphics.*;
-
+/*
 public enum Style
 {
 	STRAIGHT,
@@ -13,9 +13,10 @@ public enum Position
 	MIDDLELEFT, CENTER, MIDDLERIGHT,
 	BOTTOMLEFT, BOTTOMMIDDLE, BOTTOMRIGHT
 }
-
+*/
 public class Initials extends GraphicsProgram
 {
+	/*
 	public void run()
 	{
 		Initial firstInitial = new Initial();		
@@ -44,5 +45,35 @@ public class Initials extends GraphicsProgram
 		word.add( thirdInitial );
 
 		add( word , getWidth()/2, getHeight()/2 );
-	}	
+	}
+	*/
+
+	private GGompound m_word = new GCompound();
+
+	private GCompound m_firstInitial = new GCompound();
+	private	GCompound m_secondInitial = new GCompound();
+	private	GCompound m_thirdInitial = new GCompound()
+
+	public void init()
+	{
+		setSize( 600, 400 );
+	}
+	
+	public void run()
+	{
+		strokeOne = new GLine( -10, 20, 0, -20 );
+		strokeTwo = new GLine( 0, -20, 10, 20 );
+		strokeThree = new GLine( -5, 0, 5, 0 );
+		m_firstInitial.add( strokeOne );
+		m_firstInitial.add( strokeTwo );
+		m_firstInitial.add( strokeThree );
+		add( m_firstInitial );
+		//add( m_word, getWidth()/2, getHeight()/2 );
+	}
+
+	
+	
 }
+
+
+
