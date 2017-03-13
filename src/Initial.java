@@ -11,9 +11,15 @@ public class Initial extends GCompound {
 	public final static GPoint TOPLEFT = new GPoint( -10, -20 );
 	public final static GPoint TOPMIDDLE = new GPoint( 0, -20 );
 	public final static GPoint TOPRIGHT = new GPoint( 10, -20 );
+	public final static GPoint UPPERLEFT = new GPoint( -10, 10 );
+	public final static GPoint UPPERMIDDLE = new GPoint( 0, 10 );
+	public final static GPoint UPPERRIGHT = new GPoint( 10, 10 );
 	public final static GPoint MIDDLELEFT = new GPoint( -10, 0 );
 	public final static GPoint CENTER = new GPoint();
 	public final static GPoint MIDDLERIGHT = new GPoint( 10, 0 );
+	public final static GPoint LOWERLEFT = new GPoint( -10, 10 );
+	public final static GPoint LOWERMIDDLE = new GPoint( 0, 10 );
+	public final static GPoint LOWERRIGHT = new GPoint( 10, 10 );
 	public final static GPoint BOTTOMLEFT = new GPoint( -10, 20 );
 	public final static GPoint BOTTOMMIDDLE = new GPoint( 0, 20 );
 	public final static GPoint BOTTOMRIGHT = new GPoint( 10, 20 );
