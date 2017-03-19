@@ -8,11 +8,11 @@ public class PumpkinEyes extends GCompound
 
 	public PumpkinEyes()
 	{
-		add( m_leftEye, -3, 0 );
-		add( m_rightEye, 3, 0 );
+		add( m_leftEye, -2.5, 0 );
+		add( m_rightEye, 2.5, 0 );
 
 	
-		m_leftEye.addVertex( -1.0, -1.0 );
+		m_leftEye.addVertex( -1, -1 );
 		m_leftEye.addVertex( 1, -1 );
 		m_leftEye.addVertex( 0, 1 );
 		m_leftEye.setFilled( true );

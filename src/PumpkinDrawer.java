@@ -5,7 +5,7 @@ public class PumpkinDrawer extends GraphicsProgram
 {
 	public static final double BODYWIDTH = 200;
 	public static final double BODYHEIGHT = 200;
-	public static final double EYE_LEVEL = -BODYHEIGHT / 4;
+	public static final double EYE_LEVEL = -BODYHEIGHT/4;
 	
 	public void run()
 	{

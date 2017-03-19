@@ -2,7 +2,7 @@ import acm.graphics.*;
 
 public class Pumpkin extends GCompound
 {	
-	private GObject m_nose = new GRect( 10, 10 );
+	private GCompound m_nose = new PumpkinNose();
 	private GObject m_stem = new GRect( 5, 5 );
 	private GCompound m_eyes = new PumpkinEyes();
 	private GObject m_mouth = new GRect( 30, 30);
@@ -15,6 +15,7 @@ public class Pumpkin extends GCompound
 	m_eyes.scale( 10, 10 );
 	add( m_eyes, 0, PumpkinDrawer.EYE_LEVEL );
 	add( m_mouth );
+	m_nose.scale( 11, 11 );
 	add( m_nose );
 	}
 }
