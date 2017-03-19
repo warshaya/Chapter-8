@@ -2,21 +2,18 @@ import acm.graphics.*;
 
 public class Pumpkin extends GCompound
 {	
-	private Nose m_nose;
-	private Stem m_stem;
-	private Eyes m_eyes;
-	private Mouth m_mouth;
-	private Body m_body;
+	private GObject m_nose = new GRect( 10, 10 );
+	private GObject m_stem = new GRect( 5, 5 );
+	private GObject m_eyes = new GOval( 10, 10 );
+	private GObject m_mouth = new GRect( 30, 30);
+	private GObject m_body = new GOval( 30, 30 );
 	
 	public Pumpkin()
 	{
-
-	}
-
 	add(m_body);
 	add(m_stem);
 	add(m_eyes);
 	add(m_mouth);
 	add(m_nose);
-	
+	}
 }
