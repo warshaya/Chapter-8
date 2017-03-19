@@ -6,7 +6,7 @@ public class Pumpkin extends GCompound
 	private GObject m_stem = new GRect( 5, 5 );
 	private GObject m_eyes = new GOval( 10, 10 );
 	private GObject m_mouth = new GRect( 30, 30);
-	private GObject m_body = new GOval( 30, 30 );
+	private GObject m_body = new PumpkinBody( PumpkinDrawer.BODYWIDTH, PumpkinDrawer.BODYHEIGHT );
 	
 	public Pumpkin()
 	{
