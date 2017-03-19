@@ -1,10 +1,6 @@
-import acm.program.*;
 import acm.graphics.*;
 
-public class Pumpkin extends GraphicsProgram
+public class Pumpkin extends GCompound
 {
-	public void run()
-	{
-		
-	}
+	
 }
