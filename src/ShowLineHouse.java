@@ -3,9 +3,9 @@ import acm.graphics.*;
 
 public class ShowLineHouse extends GraphicsProgram
 {
-	private static final double WIDTH_OF_HOUSE = 1.0/3;
-	private static final double HEIGH_OF_HOUSE_WALLS = 1.5/3;
-	private static final double HEIGHT_OF_ROOF = 1.0/3;
+	private static final double WIDTH_OF_HOUSE = 1.4/3;
+	private static final double HEIGHT_OF_HOUSE_WALLS = 1.5/3;
+	private static final double HEIGHT_OF_ROOF = 1.0/6;
 
 	private double m_width;
 	private double m_height;
@@ -31,7 +31,7 @@ public class ShowLineHouse extends GraphicsProgram
 //		System.out.println("m_width = "+m_width);
 		
 		m_houseWidth = m_width*WIDTH_OF_HOUSE;
-		m_wallHeight = m_height*HEIGH_OF_HOUSE_WALLS;
+		m_wallHeight = m_height*HEIGHT_OF_HOUSE_WALLS;
 		m_roofHeight = m_height*HEIGHT_OF_ROOF;
 
 //		System.out.println( "m_houseWidth = " + m_houseWidth + " m_wallHeight = " + m_wallHeight );
