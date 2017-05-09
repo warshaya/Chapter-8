@@ -15,8 +15,8 @@ public class GHouse extends GCompound
 
 		m_roof = new GRoof( wallWidth, roofHeight );
 		add ( m_roof, 0, 0 );
-
+		
 		m_door = new GDoor( doorWidth, doorHeight, knobSize );
-		add ( m_door, this.getWidth()/2, this.getHeight()-m_door.getHeight() );
+		add ( m_door, this.getWidth()/2 - m_door.getWidth()/2, this.getHeight()-m_door.getHeight() );
 	}
 }
