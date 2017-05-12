@@ -13,6 +13,8 @@ public class HouseOfUsher extends GraphicsProgram
 	
 	public void run()
 	{
-		
+		m_houseOfUsher = new GPoeHouse();
+		add( m_houseOfUsher, getWidth()/2 - m_houseOfUsher.getWidth()/2,
+					getHeight() - m_houseOfUsher.getHeight() );	
 	}
 }
