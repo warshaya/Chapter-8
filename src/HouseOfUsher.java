@@ -12,12 +12,12 @@ public class HouseOfUsher extends GraphicsProgram
 	public static final double HOUSE_BASE_WIDTH = 350;
 	public static final double HOUSE_BASE_HEIGHT = 200;
 	public static final double HOUSE_ROOF_HEIGHT = 100;
-	public static final double LEFT_TURRET_BASE_WIDTH = 100;
-	public static final double LEFT_TURRET_BASE_HEIGHT = 250;
-	public static final double LEFT_TURRET_ROOF_HEIGHT = 200;
-	public static final double RIGHT_TURRET_BASE_WIDTH = 50;
-	public static final double RIGHT_TURRET_BASE_HEIGHT = 270;
-	public static final double RIGHT_TURRET_ROOF_HEIGHT = 80;
+	public static final double LEFT_TOWER_BASE_WIDTH = 100;
+	public static final double LEFT_TOWER_BASE_HEIGHT = 250;
+	public static final double LEFT_TOWER_ROOF_HEIGHT = 200;
+	public static final double RIGHT_TOWER_BASE_WIDTH = 50;
+	public static final double RIGHT_TOWER_BASE_HEIGHT = 270;
+	public static final double RIGHT_TOWER_ROOF_HEIGHT = 80;
 	public static final double DOOR_BASE_WIDTH = 30;
 	public static final double DOOR_BASE_HEIGHT = 50;
 	public static final double DOOR_ROOF_HEIGHT = 20;
@@ -33,10 +33,10 @@ public class HouseOfUsher extends GraphicsProgram
 	public void run()
 	{
 		m_houseOfUsher = new GPoeHouse( HOUSE_BASE_WIDTH, HOUSE_BASE_HEIGHT, HOUSE_ROOF_HEIGHT,
-						LEFT_TURRET_BASE_WIDTH, LEFT_TURRET_BASE_HEIGHT, 
-						LEFT_TURRET_ROOF_HEIGHT,
-						RIGHT_TURRET_BASE_WIDTH, RIGHT_TURRET_BASE_HEIGHT,
-						RIGHT_TURRET_ROOF_HEIGHT,
+						LEFT_TOWER_BASE_WIDTH, LEFT_TOWER_BASE_HEIGHT, 
+						LEFT_TOWER_ROOF_HEIGHT,
+						RIGHT_TOWER_BASE_WIDTH, RIGHT_TOWER_BASE_HEIGHT,
+						RIGHT_TOWER_ROOF_HEIGHT,
 						DOOR_BASE_WIDTH, DOOR_BASE_HEIGHT, DOOR_ROOF_HEIGHT,
 						LEFT_WINDOW_WIDTH, LEFT_WINDOW_HEIGHT,
 						RIGHT_WINDOW_WIDTH, RIGHT_WINDOW_HEIGHT,
