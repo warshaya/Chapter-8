@@ -26,8 +26,9 @@ public class HouseOfUsher
 
 	public static void main( String[] args )
 	{
-		m_graphicsProgram.start( new String[0] );
-		m_houseOfUsher = new GPoeHouse( HOUSE_BASE_WIDTH, HOUSE_BASE_HEIGHT, HOUSE_ROOF_HEIGHT,
+		GraphicsProgram graphicsProgram = new ACMGraphicsProgram();
+		graphicsProgram.start( new String[0] );
+		GPoeHouse houseOfUsher = new GPoeHouse( HOUSE_BASE_WIDTH, HOUSE_BASE_HEIGHT, HOUSE_ROOF_HEIGHT,
 						LEFT_TOWER_BASE_WIDTH, LEFT_TOWER_BASE_HEIGHT, 
 						LEFT_TOWER_ROOF_HEIGHT,
 						RIGHT_TOWER_BASE_WIDTH, RIGHT_TOWER_BASE_HEIGHT,
@@ -37,12 +38,9 @@ public class HouseOfUsher
 						RIGHT_WINDOW_WIDTH, RIGHT_WINDOW_HEIGHT,
 						LEFT_WINDOW_DISTANCE_FROM_WALL, LEFT_WINDOW_DISTANCE_FROM_GROUND,
 						RIGHT_WINDOW_DISTANCE_FROM_WALL, RIGHT_WINDOW_DISTANCE_FROM_GROUND );
-		m_graphicsProgram.add( m_houseOfUsher.getGObject(), m_graphicsProgram.getWidth()/2 - m_houseOfUsher.getWidth()/2,
-					m_graphicsProgram.getHeight() - m_houseOfUsher.getHeight() );
+		graphicsProgram.add( houseOfUsher.getGObject(), graphicsProgram.getWidth()/2 - houseOfUsher.getWidth()/2,
+					graphicsProgram.getHeight() - houseOfUsher.getHeight() );
 	}
-
-	private static GPoeHouse m_houseOfUsher;	
-	private static GraphicsProgram m_graphicsProgram = new ACMGraphicsProgram();
 }
 
 /*
