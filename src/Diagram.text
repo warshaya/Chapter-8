@@ -1,0 +1,15 @@
+
+Drawing the house of user program
+
+Main	ACM graphics program
+	GPoeHouse
+
+GPoeHouse (GCompound)	GTower
+			GWindow
+
+GTower (GCompound)	GRoof
+			GRect
+
+GWindow	(GCompound)	GRect	
+
+GRoof (GPolygon)
