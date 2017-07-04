@@ -14,30 +14,30 @@ public class GPoeHouse
 				double rightWindowDistanceFromWall, double rightWindowDistanceFromGround)
 	{
 		m_gCompound = new GCompound();
-		m_house = new GTower( houseBaseWidth, houseBaseHeight, houseRoofHeight );
-		m_leftTower = new GTower( leftTowerBaseWidth, leftTowerBaseHeight, leftTowerRoofHeight );
-		m_rightTower = new GTower( rightTowerBaseWidth, rightTowerBaseHeight, rightTowerRoofHeight );
-		m_door = new GTower( doorBaseWidth, doorBaseHeight, doorRoofHeight );
-		m_leftWindow = new GWindow( leftWindowWidth, leftWindowHeight, 1, 1 );
-		m_rightWindow = new GWindow( rightWindowWidth, rightWindowHeight, 1, 1 );
+		GTower house = new GTower( houseBaseWidth, houseBaseHeight, houseRoofHeight );
+		GTower leftTower = new GTower( leftTowerBaseWidth, leftTowerBaseHeight, leftTowerRoofHeight );
+		GTower rightTower = new GTower( rightTowerBaseWidth, rightTowerBaseHeight, rightTowerRoofHeight );
+		GTower door = new GTower( doorBaseWidth, doorBaseHeight, doorRoofHeight );
+		GWindow leftWindow = new GWindow( leftWindowWidth, leftWindowHeight, 1, 1 );
+		GWindow rightWindow = new GWindow( rightWindowWidth, rightWindowHeight, 1, 1 );
 	
-		m_height = Math.max( Math.max( m_house.getObject().getHeight(), m_leftTower.getObject().getHeight() ),
-					m_rightTower.getObject().getHeight() );
+		double height = Math.max( Math.max( house.getObject().getHeight(), leftTower.getObject().getHeight() ),
+					rightTower.getObject().getHeight() );
 
-		m_width = Math.max( Math.max( m_house.getObject().getWidth(), m_leftTower.getObject().getWidth() ),
-					m_rightTower.getObject().getWidth() );
+		double width = Math.max( Math.max( house.getObject().getWidth(), leftTower.getObject().getWidth() ),
+					rightTower.getObject().getWidth() );
 
-		m_gCompound.add( m_house.getObject(), m_leftTower.getObject().getWidth(), m_height-m_house.getObject().getHeight() );
-		m_gCompound.add( m_leftTower.getObject(), 0, m_height-m_leftTower.getObject().getHeight() );
-		m_gCompound.add( m_rightTower.getObject(), m_leftTower.getObject().getWidth() + m_house.getObject().getWidth(),
-					m_height-m_rightTower.getObject().getHeight() );
-		m_gCompound.add( m_door.getObject(), m_leftTower.getObject().getWidth()+m_house.getObject().getWidth()/2-
-					m_door.getObject().getWidth()/2, m_height-m_door.getObject().getHeight() );
-		m_gCompound.add( m_leftWindow.getObject(), m_house.getObject().getX()+leftWindowDistanceFromWall,
-					m_height-leftWindowDistanceFromGround-m_leftWindow.getObject().getHeight() );
-		m_gCompound.add( m_rightWindow.getObject(), m_rightTower.getObject().getX()-m_rightWindow.getObject().getWidth()-
-					rightWindowDistanceFromWall, m_height-rightWindowDistanceFromGround-
-					m_rightWindow.getObject().getHeight() );
+		m_gCompound.add( house.getObject(), leftTower.getObject().getWidth(), height-house.getObject().getHeight() );
+		m_gCompound.add( leftTower.getObject(), 0, height-leftTower.getObject().getHeight() );
+		m_gCompound.add( rightTower.getObject(), leftTower.getObject().getWidth() + house.getObject().getWidth(),
+					height-rightTower.getObject().getHeight() );
+		m_gCompound.add( door.getObject(), leftTower.getObject().getWidth()+house.getObject().getWidth()/2-
+					door.getObject().getWidth()/2, height-door.getObject().getHeight() );
+		m_gCompound.add( leftWindow.getObject(), house.getObject().getX()+leftWindowDistanceFromWall,
+					height-leftWindowDistanceFromGround-leftWindow.getObject().getHeight() );
+		m_gCompound.add( rightWindow.getObject(), rightTower.getObject().getX()-rightWindow.getObject().getWidth()-
+					rightWindowDistanceFromWall, height-rightWindowDistanceFromGround-
+					rightWindow.getObject().getHeight() );
 	}	
 
 	public GObject getGObject()
@@ -61,12 +61,4 @@ public class GPoeHouse
 	}
 	
 	private GCompound m_gCompound;
-	private GTower m_house;
-	private GTower m_leftTower;
-	private GTower m_rightTower;
-	private GTower m_door;
-	private GWindow m_leftWindow;
-	private GWindow m_rightWindow;	
-	private double m_height;
-	private double m_width;
 }
