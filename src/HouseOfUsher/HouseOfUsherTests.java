@@ -1,6 +1,6 @@
 import org.junit.*;
 
-public class HouseOfUserTests
+public class HouseOfUsherTests
 {
 	// what will I test?
 // that: bottom of the house is above the bottom of the window?
