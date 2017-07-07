@@ -23,7 +23,14 @@ namespace DrawLincolnMemorial
       public MainWindow()
       {
          InitializeComponent();
-         createAndAddLine();
+         var memorialWalls = new Rectangle();
+         memorialWalls.Height = 100;
+         memorialWalls.Width = myWindow.Width * 0.666667;
+         memorialWalls.Fill = System.Windows.Media.Brushes.LightSeaGreen;
+         myCanvas.Children.Add( memorialWalls );
+         Canvas.SetLeft( memorialWalls, myCanvas.Width / 2 - memorialWalls.Width / 2 );
+         Canvas.SetTop( memorialWalls, myCanvas.Height / 2 - memorialWalls.Height / 2 );
+         //createAndAddLine();
       }
 
       private void createAndAddLine()
