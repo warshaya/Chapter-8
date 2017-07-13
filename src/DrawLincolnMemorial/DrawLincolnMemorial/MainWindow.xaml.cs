@@ -28,8 +28,8 @@ namespace DrawLincolnMemorial
          memorialWalls.Width = myWindow.Width * 0.666667;
          memorialWalls.Fill = System.Windows.Media.Brushes.LightSeaGreen;
          myCanvas.Children.Add( memorialWalls );
-         Canvas.SetLeft( memorialWalls, myCanvas.Width / 2 - memorialWalls.Width / 2 );
-         Canvas.SetTop( memorialWalls, myCanvas.Height / 2 - memorialWalls.Height / 2 );
+         Canvas.SetLeft( memorialWalls, (myCanvas.Width - memorialWalls.Width) / 2.0 );
+         Canvas.SetTop( memorialWalls, (myCanvas.Height - memorialWalls.Height) / 2.0 );
          //createAndAddLine();
       }
 
