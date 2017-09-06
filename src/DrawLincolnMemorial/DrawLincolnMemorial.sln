@@ -5,6 +5,13 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawLincolnMemorial", "DrawLincolnMemorial\DrawLincolnMemorial.csproj", "{B539831B-C1B6-4A81-B2E1-F0FF72AE7A3D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A4FC155-3BD9-4A6C-8757-7A34A41C5F00}"
+	ProjectSection(SolutionItems) = preProject
+		Canvas.cs = Canvas.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawLincolnMemorialTests", "DrawLincolnMemorialTests\DrawLincolnMemorialTests.csproj", "{1D786803-3566-4872-8794-4B02D4FC1A35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,10 @@ Global
 		{B539831B-C1B6-4A81-B2E1-F0FF72AE7A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B539831B-C1B6-4A81-B2E1-F0FF72AE7A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B539831B-C1B6-4A81-B2E1-F0FF72AE7A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D786803-3566-4872-8794-4B02D4FC1A35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D786803-3566-4872-8794-4B02D4FC1A35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D786803-3566-4872-8794-4B02D4FC1A35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D786803-3566-4872-8794-4B02D4FC1A35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
